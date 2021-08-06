@@ -8,14 +8,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var cpfTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    func isValidCPF() -> Bool {
+        if cpfTextField.text == "" {
+            return false
+        }
+        
+        if cpfTextField.text?.count != 11 {
+            return false
+        }
+        
+        let numericCPF = Int(cpfTextField.text!)
+        
+        if numericCPF == nil {
+            return false
+        }
+        return true
+    }
     
     func isValidName() -> Bool {
         if nameTextField.text == "" {
@@ -27,16 +44,23 @@ class ViewController: UIViewController {
     
     @IBAction func okButtonAction(_ sender: Any) {
         
-        if !isValidName() {
-            nameTextField.layer.borderWidth = 1
-            nameTextField.layer.borderColor = UIColor.red.cgColor
+        if !isValidCPF() {
+            cpfTextField.layer.borderWidth = 1
+            cpfTextField.layer.borderColor = UIColor.red.cgColor
         } else {
-            nameTextField.layer.borderWidth = 1
-            nameTextField.layer.borderColor = UIColor.clear.cgColor
+            cpfTextField.layer.borderWidth = 1
+            cpfTextField.layer.borderColor = UIColor.clear.cgColor
         }
         
+        if !isValidName() {
+        nameTextField.layer.borderWidth = 1
+        nameTextField.layer.borderColor = UIColor.red.cgColor
+        } else {
+        nameTextField.layer.borderWidth = 1
+        nameTextField.layer.borderColor = UIColor.clear.cgColor
+        }
     }
-    
-
 }
+
+
 

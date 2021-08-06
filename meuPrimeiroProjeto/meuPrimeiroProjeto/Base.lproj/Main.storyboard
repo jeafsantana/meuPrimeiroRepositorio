@@ -129,6 +129,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cpfTextField" destination="7uK-6C-Nus" id="sPN-Ff-cnu"/>
                         <outlet property="nameTextField" destination="a4p-cw-y0Z" id="tWT-nW-mys"/>
                     </connections>
                 </viewController>
