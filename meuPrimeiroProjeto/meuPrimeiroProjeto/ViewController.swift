@@ -8,8 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var cpfTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,13 @@ class ViewController: UIViewController {
         if numericCPF == nil {
             return false
         }
-        
+        return true
+    }
+    
+    func isValidName() -> Bool {
+        if nameTextField.text == "" {
+            return false
+        }
         return true
     }
     
@@ -44,7 +51,16 @@ class ViewController: UIViewController {
             cpfTextField.layer.borderWidth = 1
             cpfTextField.layer.borderColor = UIColor.clear.cgColor
         }
+        
+        if !isValidName() {
+        nameTextField.layer.borderWidth = 1
+        nameTextField.layer.borderColor = UIColor.red.cgColor
+        } else {
+        nameTextField.layer.borderWidth = 1
+        nameTextField.layer.borderColor = UIColor.clear.cgColor
+        }
     }
-
 }
+
+
 
