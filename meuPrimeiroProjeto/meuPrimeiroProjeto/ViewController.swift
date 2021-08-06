@@ -11,10 +11,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var cpfTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var telephoneTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    func isValidTelephone() -> Bool {
+        if telephoneTextField.text?.count == 9 || telephoneTextField.text?.count == 11 {
+            return true
+        }
+        return false
     }
     
     func isValidCPF() -> Bool {
@@ -53,11 +61,19 @@ class ViewController: UIViewController {
         }
         
         if !isValidName() {
-        nameTextField.layer.borderWidth = 1
-        nameTextField.layer.borderColor = UIColor.red.cgColor
+            nameTextField.layer.borderWidth = 1
+            nameTextField.layer.borderColor = UIColor.red.cgColor
         } else {
-        nameTextField.layer.borderWidth = 1
-        nameTextField.layer.borderColor = UIColor.clear.cgColor
+            nameTextField.layer.borderWidth = 1
+            nameTextField.layer.borderColor = UIColor.clear.cgColor
+        }
+        
+        if !isValidTelephone() {
+            telephoneTextField.layer.borderWidth = 1
+            telephoneTextField.layer.borderColor = UIColor.red.cgColor
+        } else {
+            telephoneTextField.layer.borderWidth = 1
+            telephoneTextField.layer.borderColor = UIColor.clear.cgColor
         }
     }
 }
