@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cpfTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var telephoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,15 @@ class ViewController: UIViewController {
     
     @IBAction func okButtonAction(_ sender: Any) {
         
+        if let nome = nameTextField.text, let cpf = cpfTextField.text, let telefone = telephoneTextField.text, let email = emailTextField.text {
+                        
+            let pessoa = Pessoa(nome: nome, cpf: cpf, telefone: telefone, email: email)
+            pessoa.imprimeDados()
+        }
+        
+    }
+    
+    private func validaDados() {
         if !isValidCPF() {
             cpfTextField.layer.borderWidth = 1
             cpfTextField.layer.borderColor = UIColor.red.cgColor

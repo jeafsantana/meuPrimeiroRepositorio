@@ -15,6 +15,7 @@
 		E126870C26BB3C5E003469C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E126870A26BB3C5E003469C3 /* LaunchScreen.storyboard */; };
 		E126871726BB3C5E003469C3 /* meuPrimeiroProjetoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126871626BB3C5E003469C3 /* meuPrimeiroProjetoTests.swift */; };
 		E126872226BB3C5E003469C3 /* meuPrimeiroProjetoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E126872126BB3C5E003469C3 /* meuPrimeiroProjetoUITests.swift */; };
+		E136D9A726C1E8B3004E46C8 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = E136D9A626C1E8B3004E46C8 /* Pessoa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E126871D26BB3C5E003469C3 /* meuPrimeiroProjetoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meuPrimeiroProjetoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E126872126BB3C5E003469C3 /* meuPrimeiroProjetoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meuPrimeiroProjetoUITests.swift; sourceTree = "<group>"; };
 		E126872326BB3C5E003469C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E136D9A626C1E8B3004E46C8 /* Pessoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E126870826BB3C5E003469C3 /* Assets.xcassets */,
 				E126870A26BB3C5E003469C3 /* LaunchScreen.storyboard */,
 				E126870D26BB3C5E003469C3 /* Info.plist */,
+				E136D9A626C1E8B3004E46C8 /* Pessoa.swift */,
 			);
 			path = meuPrimeiroProjeto;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				E126870426BB3C5B003469C3 /* ViewController.swift in Sources */,
 				E126870026BB3C5B003469C3 /* AppDelegate.swift in Sources */,
+				E136D9A726C1E8B3004E46C8 /* Pessoa.swift in Sources */,
 				E126870226BB3C5B003469C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
